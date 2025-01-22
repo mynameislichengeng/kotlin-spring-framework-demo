@@ -1,24 +1,38 @@
 plugins {
-    id("org.springframework.boot") version "3.2.0"
-    id("io.spring.dependency-management") version "1.1.4"
-    kotlin("jvm") version "1.9.20"
-    kotlin("plugin.spring") version "1.9.20"
+    id("org.springframework.boot") version "3.2.0" apply false
+    id("io.spring.dependency-management") version "1.1.4" apply false
+    kotlin("jvm") version "1.9.20" apply false
+    kotlin("plugin.spring") version "1.9.20" apply false
 }
 
-group = "com.lc.spring.framework"
-version = "1.0-SNAPSHOT"
+allprojects {
+    group = "com.lc.spring.framework"
+    version = "1.0-SNAPSHOT"
 
-dependencies {
-    implementation("org.springframework.boot:spring-boot-starter")
-    implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.jetbrains.kotlin:kotlin-reflect")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    repositories {
+        mavenCentral()
+    }
 }
 
-tasks.withType<Test> {
-    useJUnitPlatform()
-}
+subprojects {
+    apply(plugin = "org.springframework.boot")
+    apply(plugin = "io.spring.dependency-management")
+    apply(plugin = "kotlin")
+    apply(plugin = "kotlin-spring")
+    apply(plugin = "java-library")
 
-kotlin {
-    jvmToolchain(17)
+    dependencies {
+        implementation("org.springframework.boot:spring-boot-starter")
+        implementation("org.springframework.boot:spring-boot-starter-web")
+        implementation("org.jetbrains.kotlin:kotlin-reflect")
+        testImplementation("org.springframework.boot:spring-boot-starter-test")
+    }
+
+    tasks.withType<Test> {
+        useJUnitPlatform()
+    }
+
+    kotlin {
+        jvmToolchain(17)
+    }
 }

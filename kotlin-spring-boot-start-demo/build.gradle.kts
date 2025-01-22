@@ -18,4 +18,6 @@ tasks.test {
 }
 kotlin {
     jvmToolchain(17)
+}dependencies {
+    // 子项目特定的依赖可以在这里添加
 }
