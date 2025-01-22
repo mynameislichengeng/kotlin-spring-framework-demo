@@ -9,6 +9,14 @@ build/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/gradle.xml
+.idea/kotlinc.xml
+.idea/sonarlint/issuestore/index.pb
+.idea/sonarlint/securityhotspotstore/index.pb
+.idea/sonarlint/issuestore/2/
+.idea/sonarlint/issuestore/f/
+.idea/sonarlint/securityhotspotstore/2/
+.idea/sonarlint/securityhotspotstore/f/
 *.iws
 *.iml
 *.ipr
@@ -45,3 +53,4 @@ bin/
 .DS_Store
 
 .aider*
+

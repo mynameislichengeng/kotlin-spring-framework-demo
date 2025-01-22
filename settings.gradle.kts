@@ -39,4 +39,4 @@ dependencyResolutionManagement {
 
 
 rootProject.name = "kotlin-spring-framework-demo"
-
+include("kotlin-spring-boot-start-demo")

@@ -1,23 +1,12 @@
-plugins {
-    kotlin("jvm")
-}
-
-group = "com.lc.spring.framework"
-version = "1.0-SNAPSHOT"
-
-repositories {
-    mavenCentral()
-}
 
 dependencies {
-    testImplementation(kotlin("test"))
+    implementation("org.springframework.boot:spring-boot-starter")
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.jetbrains.kotlin:kotlin-reflect")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
-tasks.test {
-    useJUnitPlatform()
-}
 kotlin {
     jvmToolchain(17)
-}dependencies {
-    // 子项目特定的依赖可以在这里添加
 }
+

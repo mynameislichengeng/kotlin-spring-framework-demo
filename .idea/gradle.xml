@@ -6,10 +6,12 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="D:/program/rep/.gradle/wrapper/dists/gradle-8.10-all/5d1orm1foysj2p3f4z6mcghoz/gradle-8.10" />
         <option name="gradleJvm" value="17_open" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/kotlin-spring-boot-start-demo" />
           </set>
         </option>
       </GradleProjectSettings>
